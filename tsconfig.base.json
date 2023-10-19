@@ -1,4 +1,7 @@
 {
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
@@ -19,8 +22,9 @@
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@playground/component": ["libs/component/src/index.ts"],
-      "@playground/feature/*": ["libs/feature/src/lib/*"]
+      "@playground/asset/*": ["libs/asset/*"],
+      "@playground/component/*": ["libs/component/*"],
+      "@playground/feature/*": ["libs/feature/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

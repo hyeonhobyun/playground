@@ -18,11 +18,11 @@ const calculateAlternativeViewportUnit = () => {
   /* some mobile browsers have different viewport unit calculation strategy for native ui (controller, scrollbar and etc) */
   document.documentElement.style.setProperty(
     '--1vh-as-px',
-    `${window.innerHeight * ONE_PERCENT_RATIO}px`,
+    `${window.innerHeight * ONE_PERCENT_RATIO}px`
   );
   document.documentElement.style.setProperty(
     '--1vw-as-px',
-    `${window.innerWidth * ONE_PERCENT_RATIO}px`,
+    `${window.innerWidth * ONE_PERCENT_RATIO}px`
   );
 };
 

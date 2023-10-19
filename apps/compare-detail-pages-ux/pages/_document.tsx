@@ -5,14 +5,14 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { sheetT } from 'styletron-engine-atomic/lib/server/server';
+import { Provider as StyletronProvider } from 'styletron-react';
 import {
   isServerStyletron,
   styletron,
   STYLETRON_CLASSNAME,
-} from '@playground/feature/style/styletron';
-import { GlobalResetStyle } from '@playground/feature/style/globalReset';
-import { sheetT } from 'styletron-engine-atomic/lib/server/server';
-import { Provider as StyletronProvider } from 'styletron-react';
+} from '@playground/feature/src/lib/style/styletron';
+import { GlobalResetStyle } from '@playground/feature/src/lib/style/globalReset';
 
 class CustomDocument extends Document<{
   stylesheets: sheetT[];

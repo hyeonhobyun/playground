@@ -7,7 +7,7 @@ export const styletron =
     ? new Server()
     : new Client({
         hydrate: document.getElementsByClassName(
-          STYLETRON_CLASSNAME,
+          STYLETRON_CLASSNAME
         ) as HTMLCollectionOf<HTMLStyleElement>,
       });
 
