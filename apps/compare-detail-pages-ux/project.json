@@ -1,0 +1,56 @@
+{
+  "name": "compare-detail-pages-ux",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/compare-detail-pages-ux",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/compare-detail-pages-ux"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/compare-detail-pages-ux"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "compare-detail-pages-ux:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "compare-detail-pages-ux:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "compare-detail-pages-ux:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "compare-detail-pages-ux:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/compare-detail-pages-ux/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
