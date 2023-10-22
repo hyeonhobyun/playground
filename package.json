@@ -19,7 +19,7 @@
     "workspace:update": "nx migrate latest",
     "postworkspace:update": "zx libs/script/src/lib/postWorkspace:update.mjs",
     "dep-graph": "nx dep-graph",
-    "check:unusedModules": "npx depcheck --ignores='tslib,dotenv,@nrwl/*,prettier,@types/*,@babel/*,@typescript-eslint/eslint-plugin,eslint-plugin*'",
+    "check:unusedModules": "npx depcheck --ignores='tslib,dotenv,@nx/*,prettier,@types/*,@babel/*,@typescript-eslint/eslint-plugin,eslint-plugin*'",
     "check:outdatedModules": "yarn outdated",
     "generate:getAccessTokenWithHttp": "export $(cat .env | xargs) && ts-node libs/http/src/lib/getAccessTokenWithHttp.ts",
     "generate:typeHelper": "ts-node -P libs/script/tsconfig.json -r tsconfig-paths/register libs/script/src/lib/typeHelper.ts",

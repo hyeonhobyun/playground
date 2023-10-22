@@ -24,7 +24,7 @@ const securityHeaders = [
 ];
 
 /**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+ * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
   reactStrictMode: true,
